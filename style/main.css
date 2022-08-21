@@ -171,4 +171,8 @@ li{
         border-left: none;
         padding-left: 0;
     }
+
+    iframe{
+        max-width: 600px;
+    }
 }
