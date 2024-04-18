@@ -5,6 +5,13 @@ import { Link } from "react-scroll";
 import contactImg from "../../assets/contacts.png";
 
 const Navbar = () => {
+  const scrollToSection = (contactPage) => {
+    const section = document.getElementById(contactPage);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav className="navbar">
       <img src={logo} alt="logo" className="logo" />
@@ -47,7 +54,7 @@ const Navbar = () => {
 
         <Link
           activeClass="active"
-          to="contact"
+          to="client"
           spy={true}
           smoth={true}
           offset={-50}
@@ -59,11 +66,7 @@ const Navbar = () => {
       </div>
       <button
         className="desktopMenuBtn"
-        onClick={() => {
-          document
-            .getElementById("contact")
-            .scrollIntroView({ behavior: "smoth" });
-        }}
+        onClick={() => scrollToSection("contactPage")}
       >
         <img src={contactImg} alt="contact" className="deskopMenuImg" />
         Contact Me

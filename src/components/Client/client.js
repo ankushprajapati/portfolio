@@ -10,7 +10,7 @@ import Atom from "../../assets/atom.png";
 
 const Client = () => {
   return (
-    <section id="contactPage">
+    <section id="client">
       <div id="clients">
         <h1 className="contactPageTitle">My Skills</h1>
         <p className="clientDesc"></p>
